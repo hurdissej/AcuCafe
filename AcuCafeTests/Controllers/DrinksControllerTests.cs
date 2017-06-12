@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Web.Http.Results;
 using AcuCafe.Controllers.APIs;
 using AcuCafe.Core;
+using AcuCafe.Core.Repositories;
 using AcuCafe.Models;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;

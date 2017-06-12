@@ -1,0 +1,60 @@
+<div class="container-fluid">
+    <div class="row drinksmenu">
+        <div class="col-xs-3"></div>
+        <div  class="col-xs-6 text-center">
+            <div id = "titleRow" class="row">
+                <div class="col-xs-12">
+                <h1> Welcome to the AcuCafe </h1>
+                <h3> Because Smurf-Naming is fun!</h3>
+                    </div>
+            </div>
+
+            <div class="row">
+            <div class="col-xs-1"></div>
+            <div class="col-xs-4 menu">
+            <h2> Drinks Menu </h2>
+            <p ng-show="vm.loadingDrinks"> Just fetching today's menu! </p>
+            <img src="../../ClientApp/common/images/spinner.gif" ng-show="vm.loadingDrinks"/>
+            <table class="table" ng-show="!vm.loadingDrinks">
+                <thead>
+                    <th> Drink </th>
+                    <th> Price </th>
+                    <th> Order! </th>
+                </thead>
+                <tbody ng-repeat="drink in vm.drinks">
+                    <td class="col-sm-3"> {{drink.description}} </td>
+                    <td class="col-sm-3"> {{drink.price}} </td>
+                    <td class="col-sm-2"> <button type="button" class="btn btn-default btn-sm" ng-click="vm.addDrink(drink.id, drink.description, drink.price)" data-toggle="modal" data-target="#myModal"> +  </button> </td>
+                </tbody>
+            </table>
+            </div>
+            <div class="col-xs-1"></div>
+            <div class="col-xs-4 menu">
+                <h2> Your Orders: </h2>
+                <h5 ng-show="vm.basketEmpty"> You've got no orders pending, get something to drink! </h5>
+                <div class="orderItem" ng-repeat="order in vm.allOrders">
+                    <h3> {{ order.drink }} </h3>
+                <div class="optionItem" ng-repeat="option in order.options">
+                    <h6> {{ option }} </h6>
+                    </div>
+                </div>
+                <div ng-show="!vm.basketEmpty" id="total">
+                    <h4 > Total: £{{ vm.total }}  </h4>
+                </div>
+            </div>
+            </div>
+
+            <!-- Pop-up -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <order-directive></order-directive>
+            </div>
+
+            </div>
+
+
+            </div>
+
+            </div>
+        </div>
+    </div>
+</div>

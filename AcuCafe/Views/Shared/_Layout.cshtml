@@ -1,23 +1,38 @@
 ﻿<!DOCTYPE html>
-<html>
+<html ng-app="acuCafe">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/angular")
+    <link rel="stylesheet" href="~\ClientApp/common/css/app.css">
+    <link rel="shortcut icon" href="~\ClientApp/common/images/acuCafeLogo.png">
 </head>
 <body>
 
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - AcuCafe</p>
-        </footer>
-    </div>
 
-    @Scripts.Render("~/bundles/jquery")
+    @RenderBody()
+
+
+    
+<script src="~\ClientApp/core/core.module.js"></script>
+<script src="~\ClientApp/core/config.js"></script>
+<script src="~\ClientApp/app.js"></script>
+    
+<!-- Drinks Module -->
+<script src="~\ClientApp/drinks/drinks.js"></script>
+<script src="~\ClientApp/drinks/services/drinkService.js"></script>
+<script src="~\ClientApp/drinks/services/optionService.js"></script>
+<script src="~\ClientApp/drinks/services/orderService.js"></script>
+<script src="~\ClientApp/drinks/directives/drinkDirective.js"></script>
+<script src="~\ClientApp/drinks/controllers/drinkController.js"></script>
+<script src="~\ClientApp/drinks/controllers/routeConfig.js"></script>
+    
+
+
+@Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 </body>
