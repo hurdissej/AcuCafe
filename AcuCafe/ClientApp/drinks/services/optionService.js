@@ -14,7 +14,7 @@
     function getAllOptions() {
         return  $http({
                 method: 'get',
-                url: 'https://cors-anywhere.herokuapp.com/http://acucafe.acumen.rocks/api/Option/',
+                url: '/api/Options',
                 cache: true
             }).then(function (result) {
                 return result.data;

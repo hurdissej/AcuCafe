@@ -16,9 +16,10 @@
 
             return $http({
                 method: 'get',
-                url: 'https://cors-anywhere.herokuapp.com/http://acucafe.acumen.rocks/api/Drink/',
+                url: '/api/Drinks',
                 cache: true
             }).then(function (result) {
+                console.log(result.data);
                 return result.data;
             });
 
