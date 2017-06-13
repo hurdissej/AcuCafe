@@ -31,6 +31,23 @@ namespace AcuCafe.Controllers.APIs
         public void PostOrder(OrderDTO order)
         {
             _unitOfWork.Orders.CreateOrder(order, _unitOfWork);
+            _unitOfWork.Complete();
+        }
+
+
+        // Delete /api/id
+        [HttpDelete]
+        public IHttpActionResult DeleteOrder(int Id)
+        {
+            if (_unitOfWork.Orders.GetOrder(Id) == null)
+            {
+                return BadRequest("Order Id Not Found");
+            }
+
+            _unitOfWork.Orders.DeleteOrder(Id);
+            _unitOfWork.Complete();
+
+            return Ok();
         }
     }
 }

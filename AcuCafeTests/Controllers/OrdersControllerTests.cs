@@ -39,5 +39,26 @@ namespace AcuCafeTests.Controllers
             result.Should().BeOfType<OkNegotiatedContentResult<IEnumerable<Orders>>>();
 
         }
+
+        [TestMethod]
+        public void DeleteOrder_OrderIdNotFound_BadRequest()
+        {
+            var result = _controller.DeleteOrder(123);
+
+            result.Should().BeOfType<BadRequestErrorMessageResult>();
+        }
+
+        [TestMethod]
+        public void DeleteOrder_OrderIdFound_OkResult()
+        {
+            var order = new Orders(){OrderId = 1};
+
+            _repository.Setup(r => r.GetOrder(1)).Returns(new []{order});
+
+            var result = _controller.DeleteOrder(1);
+
+            result.Should().BeOfType<OkResult>();
+
+        }
     }
 }

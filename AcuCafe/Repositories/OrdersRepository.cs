@@ -28,6 +28,12 @@ namespace AcuCafe.Repositories
                 .ToList();
         }
 
+        public IEnumerable<Orders> GetOrder(int orderId)
+        {
+            return _context.Orders.Where(x => x.OrderId == orderId).ToList(); 
+        }
+
+        //ID Provider
         public int GetOrderId()
         {
             var id = _context.Orders.Max(i => i.OrderId);
@@ -51,7 +57,6 @@ namespace AcuCafe.Repositories
                 };
 
                 _context.Orders.Add(newOrder);
-                _unitOfWork.Complete();
             }
 
             foreach (var option in order.OptionIds)
@@ -65,7 +70,18 @@ namespace AcuCafe.Repositories
                 };
 
                 _context.Orders.Add(newOrder);
-                _unitOfWork.Complete();
+            }
+
+        }
+
+        public void DeleteOrder(int orderId)
+        {
+            var IdsToDelete = _context.Orders.Where(x => x.OrderId == orderId);
+
+            foreach (var id in IdsToDelete)
+            {
+                _context.Orders.Remove(id);
+
             }
 
         }
