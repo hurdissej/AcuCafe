@@ -6,5 +6,6 @@ namespace AcuCafe.Models
     {
         DbSet<Drinks> Drinks { get; set; }
         DbSet<Options> Options { get; set; }
+        DbSet<Orders> Orders { get; set; }
     }
 }

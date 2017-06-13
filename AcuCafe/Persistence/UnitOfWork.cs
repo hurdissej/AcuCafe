@@ -15,12 +15,14 @@ namespace AcuCafe.Persistence
         
         public IDrinksRepository Drinks { get; set; }
         public IOptionsRepository Options { get; set; }
+        public IOrdersRepository Orders { get; set; }
 
         public UnitOfWork(ApplicationDbContext context)
         {
             Context = context;
             Drinks = new DrinksRepository(context);
             Options = new OptionsRepository(context);
+            Orders = new OrdersRepository(context);
         }
 
         public void Complete()

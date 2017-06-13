@@ -13,7 +13,7 @@ var acuCafe;
             this.config = config;
             this.loadingDrinks = true;
             this.loadingOptions = true;
-            this.drink = 0;
+            this.drink = [];
             this.optionIDs = [];
             this.basketEmpty = true;
             this.userDrink = '';
@@ -34,7 +34,7 @@ var acuCafe;
         }
         drinkController.prototype.addDrink = function (drinkID, description, price) {
             price = Math.round(price * 100) / 100;
-            this.drink = drinkID;
+            this.drink.push(drinkID);
             this.userDrink = description;
             this.runningTotal += price;
         };
@@ -67,12 +67,8 @@ var acuCafe;
             };
             // Create API data
             var drinks = {
-                "drinks": [
-                    {
-                        "drinkId": this.drink,
+                        "drinkIds": this.drink,
                         "optionIds": this.optionIDs
-                    }
-                ]
             };
             // Clear UI
             this.allOrders.push(userfriendlyDrinks);

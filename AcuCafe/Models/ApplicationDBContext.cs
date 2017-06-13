@@ -7,6 +7,7 @@ namespace AcuCafe.Models
     {
         public DbSet<Drinks> Drinks { get; set; }
         public DbSet<Options> Options { get; set; }
+        public DbSet<Orders> Orders { get; set; }
         public ApplicationDbContext()
             : base("ApplcationDbContext")
         {

@@ -15,7 +15,7 @@
             console.log(drinks);
             return $http({
                 method: 'POST',
-                url: 'https://cors-anywhere.herokuapp.com/http://acucafe.acumen.rocks/api/Order',
+                url: '/api/Orders',
                 data: drinks
             }).then(function() {
                 alert("Your order will be with you shortly!!");

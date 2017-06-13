@@ -7,6 +7,7 @@ namespace AcuCafe.Core
     {
         IDrinksRepository Drinks { get; set; }
         IOptionsRepository Options { get; set; }
+        IOrdersRepository Orders { get; set; }
         void Complete();
     }
 }

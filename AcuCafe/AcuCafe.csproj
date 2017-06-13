@@ -180,7 +180,9 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\APIs\DrinksController.cs" />
     <Compile Include="Controllers\APIs\OptionsController.cs" />
+    <Compile Include="Controllers\APIs\OrdersController.cs" />
     <Compile Include="Controllers\CafeController.cs" />
+    <Compile Include="Core\Folder\OrderDTO.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -192,18 +194,29 @@
     <Compile Include="Migrations\201706121323046_AddOptions.Designer.cs">
       <DependentUpon>201706121323046_AddOptions.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706131308131_AddOrdersToDB.cs" />
+    <Compile Include="Migrations\201706131308131_AddOrdersToDB.Designer.cs">
+      <DependentUpon>201706131308131_AddOrdersToDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706131309274_AddOrderID.cs" />
+    <Compile Include="Migrations\201706131309274_AddOrderID.Designer.cs">
+      <DependentUpon>201706131309274_AddOrderID.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDBContext.cs" />
     <Compile Include="Models\Drinks.cs" />
     <Compile Include="Models\IApplicationDbContext.cs" />
     <Compile Include="Models\Options.cs" />
     <Compile Include="Core\IUnitOfWork.cs" />
+    <Compile Include="Models\Orders.cs" />
     <Compile Include="Persistence\UnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\DrinksRepository.cs" />
     <Compile Include="Core\Repositories\IDrinksRepository.cs" />
     <Compile Include="Core\Repositories\IOptionsRepository.cs" />
+    <Compile Include="Core\Repositories\IOrdersRepository.cs" />
     <Compile Include="Repositories\OptionsRepository.cs" />
+    <Compile Include="Repositories\OrdersRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ClientApp\app.js" />
@@ -1050,6 +1063,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706121323046_AddOptions.resx">
       <DependentUpon>201706121323046_AddOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706131308131_AddOrdersToDB.resx">
+      <DependentUpon>201706131308131_AddOrdersToDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706131309274_AddOrderID.resx">
+      <DependentUpon>201706131309274_AddOrderID.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
