@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
+using AcuCafe.Core;
+using AcuCafe.Core.Folder;
 using AcuCafe.Core.Repositories;
 using AcuCafe.Models;
 
@@ -15,6 +17,7 @@ namespace AcuCafe.Repositories
         public OrdersRepository(IApplicationDbContext context)
         {
             _context = context;
+
         }
 
         public IEnumerable<Orders> GetOrders()
@@ -32,9 +35,39 @@ namespace AcuCafe.Repositories
             return id;
         }
 
-        public void CreateOrder(Orders order)
+        public void CreateOrder(OrderDTO order, IUnitOfWork _unitOfWork)
         {
-            _context.Orders.Add(order);
+
+            var id = _unitOfWork.Orders.GetOrderId() + 1;
+
+            foreach (var drink in order.DrinkIds)
+            {
+                var newOrder = new Orders()
+                {
+                    OrderId = id,
+                    DrinksId = drink,
+                    OptionsId = null
+
+                };
+
+                _context.Orders.Add(newOrder);
+                _unitOfWork.Complete();
+            }
+
+            foreach (var option in order.OptionIds)
+            {
+                var newOrder = new Orders()
+                {
+                    OrderId = id,
+                    DrinksId = null,
+                    OptionsId = option
+
+                };
+
+                _context.Orders.Add(newOrder);
+                _unitOfWork.Complete();
+            }
+
         }
 
     }
