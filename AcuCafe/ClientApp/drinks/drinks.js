@@ -1,3 +1,3 @@
 ﻿(function() {
-    angular.module('acuDrinks', []);
+    angular.module('acuDrinks', ['toastr']);
 }())

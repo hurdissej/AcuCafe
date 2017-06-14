@@ -202,6 +202,10 @@
     <Compile Include="Migrations\201706131309274_AddOrderID.Designer.cs">
       <DependentUpon>201706131309274_AddOrderID.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706140708352_addDateTimeToOrder.cs" />
+    <Compile Include="Migrations\201706140708352_addDateTimeToOrder.Designer.cs">
+      <DependentUpon>201706140708352_addDateTimeToOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDBContext.cs" />
     <Compile Include="Models\Drinks.cs" />
@@ -235,8 +239,12 @@
     <Content Include="ClientApp\drinks\services\orderService.js" />
     <Content Include="ClientApp\drinks\templates\Menu.html" />
     <Content Include="ClientApp\drinks\templates\OrderPopup.html" />
+    <Content Include="Content\angular-toastr.css" />
+    <Content Include="Content\angular-toastr.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\toastr.css" />
+    <Content Include="Content\toastr.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -263,6 +271,10 @@
     <Content Include="Scripts\angular-sanitize.js" />
     <Content Include="Scripts\angular-sanitize.min.js" />
     <Content Include="Scripts\angular-scenario.js" />
+    <Content Include="Scripts\angular-toastr.js" />
+    <Content Include="Scripts\angular-toastr.min.js" />
+    <Content Include="Scripts\angular-toastr.tpls.js" />
+    <Content Include="Scripts\angular-toastr.tpls.min.js" />
     <Content Include="Scripts\angular-touch.js" />
     <Content Include="Scripts\angular-touch.min.js" />
     <Content Include="Scripts\angular.js" />
@@ -285,6 +297,8 @@
     <Content Include="Scripts\angular-cookies.min.js.map" />
     <Content Include="Scripts\angular-aria.min.js.map" />
     <Content Include="Scripts\angular-animate.min.js.map" />
+    <Content Include="Content\toastr.scss" />
+    <Content Include="Content\toastr.less" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\i18n\angular-locale_af-na.js" />
     <Content Include="Scripts\i18n\angular-locale_af-za.js" />
@@ -1025,6 +1039,8 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\toastr.js" />
+    <Content Include="Scripts\toastr.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -1069,6 +1085,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706131309274_AddOrderID.resx">
       <DependentUpon>201706131309274_AddOrderID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706140708352_addDateTimeToOrder.resx">
+      <DependentUpon>201706140708352_addDateTimeToOrder.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

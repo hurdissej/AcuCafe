@@ -4,9 +4,9 @@
 (function () {
     angular
         .module('acuDrinks')
-        .factory('orderService', ['$http', orderService]);
+        .factory('orderService', ['$http', 'toastr', orderService]);
 
-    function orderService($http) {
+    function orderService($http, toastr) {
         return {
             postOrders: postOrders
         };

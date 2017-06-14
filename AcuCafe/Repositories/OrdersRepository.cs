@@ -52,7 +52,9 @@ namespace AcuCafe.Repositories
                 {
                     OrderId = id,
                     DrinksId = drink,
-                    OptionsId = null
+                    OptionsId = null,
+                    DateTime = DateTime.Now
+                    
 
                 };
 
@@ -65,7 +67,8 @@ namespace AcuCafe.Repositories
                 {
                     OrderId = id,
                     DrinksId = null,
-                    OptionsId = option
+                    OptionsId = option,
+                    DateTime = DateTime.Now
 
                 };
 

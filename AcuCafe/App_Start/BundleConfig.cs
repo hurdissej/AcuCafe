@@ -13,6 +13,7 @@ namespace AcuCafe
 
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
                         "~/Scripts/angular.js",
+                        "~/Scripts/angular-toastr.tpls.js",
                         "~/Scripts/angular-route.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
@@ -29,6 +30,7 @@ namespace AcuCafe
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
+                      "~/Content/angular-toastr.css",
                       "~/Content/site.css"));
         }
     }

@@ -18,5 +18,7 @@ namespace AcuCafe.Models
         public Options Options { get; set; }
 
         public int? OptionsId { get; set; }
+
+        public DateTime DateTime { get; set; }
     }
 }
