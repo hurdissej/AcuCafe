@@ -223,22 +223,29 @@
     <Compile Include="Repositories\OrdersRepository.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ClientApp\app.js" />
-    <Content Include="ClientApp\common\css\app.css" />
-    <Content Include="ClientApp\common\images\acuCafeLogo.png" />
-    <Content Include="ClientApp\common\images\background.jpg" />
-    <Content Include="ClientApp\common\images\spinner.gif" />
-    <Content Include="ClientApp\core\config.js" />
-    <Content Include="ClientApp\core\core.module.js" />
-    <Content Include="ClientApp\drinks\controllers\drinkController.js" />
-    <Content Include="ClientApp\drinks\controllers\routeConfig.js" />
-    <Content Include="ClientApp\drinks\directives\drinkDirective.js" />
-    <Content Include="ClientApp\drinks\drinks.js" />
-    <Content Include="ClientApp\drinks\services\drinkService.js" />
-    <Content Include="ClientApp\drinks\services\optionService.js" />
-    <Content Include="ClientApp\drinks\services\orderService.js" />
-    <Content Include="ClientApp\drinks\templates\Menu.html" />
-    <Content Include="ClientApp\drinks\templates\OrderPopup.html" />
+    <Content Include="ClientApp\.gitignore" />
+    <Content Include="ClientApp\src\app.js" />
+    <Content Include="ClientApp\src\common\css\app.css" />
+    <Content Include="ClientApp\src\common\images\acuCafeLogo.png" />
+    <Content Include="ClientApp\src\common\images\background.jpg" />
+    <Content Include="ClientApp\src\common\images\spinner.gif" />
+    <Content Include="ClientApp\src\core\config.js" />
+    <Content Include="ClientApp\src\core\core.module.js" />
+    <Content Include="ClientApp\src\drinks\controllers\drinkController.js" />
+    <Content Include="ClientApp\src\drinks\controllers\routeConfig.js" />
+    <Content Include="ClientApp\src\drinks\directives\drinkDirective.js" />
+    <Content Include="ClientApp\src\drinks\drinks.js" />
+    <Content Include="ClientApp\src\drinks\services\drinkService.js" />
+    <Content Include="ClientApp\src\drinks\services\optionService.js" />
+    <Content Include="ClientApp\src\drinks\services\orderService.js" />
+    <Content Include="ClientApp\src\drinks\templates\Menu.html" />
+    <Content Include="ClientApp\src\drinks\templates\OrderPopup.html" />
+    <Content Include="ClientApp\src\favicon.ico" />
+    <Content Include="ClientApp\src\index.html" />
+    <Content Include="ClientApp\src\styles.css" />
+    <Content Include="ClientApp\src\systemjs-angular-loader.js" />
+    <Content Include="ClientApp\src\systemjs.config.extras.js" />
+    <Content Include="ClientApp\src\systemjs.config.js" />
     <Content Include="Content\angular-toastr.css" />
     <Content Include="Content\angular-toastr.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -248,6 +255,10 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="ClientApp\karma-test-shim.js" />
+    <Content Include="ClientApp\karma.conf.js" />
+    <Content Include="ClientApp\non-essential-files.txt" />
+    <Content Include="ClientApp\protractor.config.js" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
     <Content Include="Scripts\angular-aria.js" />
@@ -299,6 +310,13 @@
     <Content Include="Scripts\angular-animate.min.js.map" />
     <Content Include="Content\toastr.scss" />
     <Content Include="Content\toastr.less" />
+    <Content Include="ClientApp\src\tsconfig.json" />
+    <Content Include="ClientApp\.editorconfig" />
+    <Content Include="ClientApp\.travis.yml" />
+    <Content Include="ClientApp\bs-config.e2e.json" />
+    <Content Include="ClientApp\bs-config.json" />
+    <Content Include="ClientApp\package.json" />
+    <Content Include="ClientApp\e2e\tsconfig.json" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\i18n\angular-locale_af-na.js" />
     <Content Include="Scripts\i18n\angular-locale_af-za.js" />
@@ -1054,6 +1072,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Cafe\Index.cshtml" />
     <Content Include="Scripts\version.json" />
+    <Content Include="ClientApp\tslint.json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1092,6 +1111,13 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\app.component.spec.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\app.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\app.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\main.ts" />
+    <TypeScriptCompile Include="ClientApp\e2e\app.e2e-spec.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
