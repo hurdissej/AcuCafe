@@ -9,6 +9,15 @@
     @Scripts.Render("~/bundles/angular")
     <link rel="stylesheet" href="../../ClientApp/src/common/css/app.css">
     <link rel="shortcut icon" href="../../ClientApp/src/common/images/acuCafeLogo.png">
+    
+    
+    <!-- Angular 2 -->
+    <script src="../../ClientApp/node_modules/core-js/client/shim.min.js"></script>
+    <script src="../../ClientApp/node_modules/zone.js/dist/zone.js"></script>
+    <script src="../../ClientApp/node_modules/systemjs/dist/system.src.js"></script>
+    <script src="../../ClientApp/src/systemjs.config.js"></script>
+    <script>System.import('../../clientApp/src/main.js').catch(function(err) { console.error(err); });</script>
+
 </head>
 <body>
 

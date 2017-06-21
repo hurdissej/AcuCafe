@@ -178,6 +178,7 @@
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\Angular2Controller.cs" />
     <Compile Include="Controllers\APIs\DrinksController.cs" />
     <Compile Include="Controllers\APIs\OptionsController.cs" />
     <Compile Include="Controllers\APIs\OrdersController.cs" />
@@ -242,6 +243,7 @@
     <Content Include="ClientApp\src\drinks\templates\OrderPopup.html" />
     <Content Include="ClientApp\src\favicon.ico" />
     <Content Include="ClientApp\src\index.html" />
+    <None Include="ClientApp\src\index.cshtml" />
     <Content Include="ClientApp\src\styles.css" />
     <Content Include="ClientApp\src\systemjs-angular-loader.js" />
     <Content Include="ClientApp\src\systemjs.config.extras.js" />
